@@ -3,7 +3,6 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)](https://streamlit.io/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-API-009688)](https://fastapi.tiangolo.com/)
-...existing code...
 
 A production-ready **Retrieval-Augmented Generation (RAG)** platform with dual interfaces: Streamlit dashboard and FastAPI REST API. Built with LangChain, HuggingFace embeddings, FAISS vector store, and Groq LLM.
 
@@ -49,7 +48,7 @@ graph TB
         
         G --> K[(FAISS Index<br/>Vector DB)]
         
-        H --> L[Groq API<br/>mixtral-8x7b]
+        H --> L[Groq API<br/>llama-3.3-70b-versatile]
     end
     
     subgraph "Data Storage"
@@ -189,7 +188,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
 # Optional (defaults provided)
 HUGGINGFACE_MODEL=sentence-transformers/all-MiniLM-L6-v2
-GROQ_MODEL=mixtral-8x7b-32768
+GROQ_MODEL=llama-3.3-70b-versatile
 VECTOR_STORE=faiss
 FAISS_INDEX_PATH=./data/faiss_index
 CHUNK_SIZE=1000
@@ -271,7 +270,7 @@ curl -X POST "http://localhost:8000/api/search" \
 - Ultra-fast LLM inference
 - Context-aware prompting
 - Retry logic with exponential backoff
-- Mixtral-8x7b model
+  - llama-3.3-70b-versatile model
 
 ### **4. Configuration** (`core/config.py`)
 - Environment-based config
@@ -395,7 +394,7 @@ curl http://localhost:8000/healthz
 | Embeddings | HuggingFace Transformers | Latest |
 | PDF Processing | LangChain | Latest |
 | Vector DB | FAISS | Latest |
-| LLM | Groq API | Mixtral-8x7b |
+| LLM | Groq API | llama-3.3-70b-versatile |
 | Web UI | Streamlit | Latest |
 | REST API | FastAPI | Latest |
 | Database | MongoDB (optional) | 5.0+ |
@@ -418,9 +417,9 @@ HUGGINGFACE_MODEL="BAAI/bge-small-en-v1.5"
 ```
 
 ### **Groq Models**
-- `mixtral-8x7b-32768` - Best quality (default)
-- `llama2-70b-4096` - Fast & efficient
-- `gemma-7b-it` - Lightweight
+- `llama-3.3-70b-versatile` - Best quality (default)
+- `llama-3.1-8b-instant` - Fast & efficient
+- `gemma2-9b-it` - Lightweight
 
 ---
 
