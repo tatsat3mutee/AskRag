@@ -1,0 +1,43 @@
+# Core dependencies
+requests
+python-dotenv
+numpy
+
+# Embeddings and ML
+sentence-transformers
+transformers
+torch
+huggingface-hub<1.0
+
+# Vector stores
+faiss-cpu
+
+# LLM APIs
+openai
+
+# PDF processing (optional)
+PyPDF2
+pypdf
+langchain
+langchain-community
+langchain-text-splitters
+tiktoken
+
+# Data processing
+pandas
+
+# Web frameworks
+fastapi
+uvicorn
+python-multipart
+streamlit
+jinja2
+
+# Visualization
+plotly
+
+# Database (optional)
+pymongo
+
+# Utilities
+tqdm

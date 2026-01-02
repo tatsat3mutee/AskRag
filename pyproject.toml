@@ -1,0 +1,27 @@
+[project]
+name = "ask-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "fastapi>=0.128.0",
+    "huggingface-hub>=0.36.0",
+    "langchain>=1.2.0",
+    "numpy>=2.4.0",
+    "openai>=2.14.0",
+    "pymongo>=4.15.5",
+    "pypdf>=6.5.0",
+    "pypdf2>=3.0.1",
+    "python-dotenv>=1.2.1",
+    "python-multipart>=0.0.21",
+    "requests>=2.32.5",
+    "sentence-transformers>=5.2.0",
+    "tiktoken>=0.12.0",
+    "torch>=2.9.1",
+    "tqdm>=4.67.1",
+    "transformers>=4.57.3",
+    "uvicorn>=0.40.0",
+    "jinja2>=3.1.0",
+]

@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Logs
+*.log
+logs/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (for production image)
+*.md
+docs/
+
+# CI/CD
+.github/
+
+# Development files
+CODE_REVIEW.md
+MIGRATION_GUIDE.md
+REVIEW_SUMMARY.md
+FINAL_SUMMARY.md
+SETUP_GUIDE.md
+
+# Application data (keep lightweight)
+faiss_index/
+data/
+*.pdf
+*.csv
+*.xlsx
+evaluation_metrics.jsonl
+demo_metrics.jsonl
+
+# Temporary
+*.tmp
+*.temp
+temp/
+tmp/
+
+# MacOS
+.DS_Store
+
+# Python version
+.python-version
+uv.lock
+pyproject.toml
+
+# Test files
+test_*.py
+*_test.py

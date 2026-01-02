@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Streamlit Dashboard
+  streamlit:
+    build: .
+    container_name: rag-streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - HUGGINGFACE_MODEL=${HUGGINGFACE_MODEL}
+      - FAISS_INDEX_PATH=${FAISS_INDEX_PATH:-./faiss_index}
+    volumes:
+      - ./data:/app/data
+      - ./faiss_index:/app/faiss_index
+    command: streamlit run app/app.py --server.port=8501 --server.address=0.0.0.0
+    restart: unless-stopped
+  
+  # FastAPI Backend (optional)
+  fastapi:
+    build: .
+    container_name: rag-fastapi
+    ports:
+      - "8000:8000"
+    environment:
+      - VECTOR_STORE=faiss
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - HUGGINGFACE_MODEL=${HUGGINGFACE_MODEL}
+      - MONGO_URI=${MONGO_URI}
+      - FAISS_INDEX_PATH=${FAISS_INDEX_PATH:-./faiss_index}
+    volumes:
+      - ./data:/app/data
+      - ./faiss_index:/app/faiss_index
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    restart: unless-stopped
+    profiles:
+      - with-api
+
+networks:
+  default:
+    name: rag-network

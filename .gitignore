@@ -1,0 +1,74 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+wheels/
+*.egg-info
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment variables (IMPORTANT: contains API keys)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Application specific
+faiss_index/
+*.pdf
+*.csv
+*.xlsx
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Metrics files (optional - comment out to track metrics)
+# evaluation_metrics.jsonl
+# demo_metrics.jsonl
+
+# Docker
+*.tar.gz
+docker-volumes/
+
+# Python version
+.python-version
+
+# UV lock file
+uv.lock
+
