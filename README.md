@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)](https://streamlit.io/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-API-009688)](https://fastapi.tiangolo.com/)
-[![License](https://img.shields.io/badge/license-MIT-green)](docs/LICENSE)
+...existing code...
 
 A production-ready **Retrieval-Augmented Generation (RAG)** platform with dual interfaces: Streamlit dashboard and FastAPI REST API. Built with LangChain, HuggingFace embeddings, FAISS vector store, and Groq LLM.
 
@@ -131,7 +131,7 @@ rag-platform/
 │   ├── README.md               # This file
 │   ├── QUICKSTART.md           # 5-minute setup guide
 │   ├── DEPLOYMENT.md           # Cloud deployment guide
-│   └── LICENSE                 # MIT License
+...existing code...
 │
 ├── 🐳 Docker/                   # Containerization
 │   ├── Dockerfile              # Multi-stage build
@@ -434,9 +434,9 @@ HUGGINGFACE_MODEL="BAAI/bge-small-en-v1.5"
 
 ---
 
-## 📄 License
+...existing code...
 
-MIT License - see [LICENSE](LICENSE) for details
+...existing code...
 
 ---
 
